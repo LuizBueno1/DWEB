@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luiz Henrique Bueno">
+    <meta name="description" content="Pesquisa sobre APIs e integrações: conceitos, tipos, ferramentas e exemplos.">
+    <meta name="keywords" content="API, Integração, REST, SOAP, GraphQL, gRPC, Pesquisa, Desenvolvimento Web">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Pesquisa sobre APIs e Integrações</title>
+</head>
+
+<body>
+    <header class="header-1">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#home" class="nav-logo">Pesquisa sobre APIs e Integrações</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#introduction" class="nav-link">Introdução</a></li>
+                    <li class="nav-item"><a href="#concepts" class="nav-link">Conceitos</a></li>
+                    <li class="nav-item"><a href="#types" class="nav-link">Tipos</a></li>
+                    <li class="nav-item"><a href="#tools" class="nav-link">Ferramentas</a></li>
+                    <li class="nav-item"><a href="#examples" class="nav-link">Exemplos</a></li>
+                    <li class="nav-item"><a href="#conclusion" class="nav-link">Conclusão</a></li>
+                    <li class="nav-item"><a href="#bibliography" class="nav-link">Referências</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home bd-grid" id="home">
+            <div class="home-data">
+                <h1 class="home-title">Pesquisa sobre <br><span class="home-title-color">APIs e Integrações</span></h1>
+                <a href="#introduction" class="button">Ler pesquisa</a>
+            </div>
+        </section>
+
+        <section class="introduction section" id="introduction">
+            <h2 class="section-title">Introdução</h2>
+            <div class="section-container bd-grid">
+                <p class="section-text">As APIs se tornaram centrais no desenvolvimento moderno porque conectam
+                    aplicações, serviços e departamentos que antes operavam de forma isolada (Seth et al., 2024;
+                    Addanki, 2025; Ofoeda et al., 2025). Em termos práticos, <strong>integração por API</strong> é o
+                    processo de ligar sistemas para compartilhar dados, operações e funcionalidades, criando soluções
+                    ponta a ponta em ambientes corporativos e digitais (Seth et al., 2024; Amer et al., 2026).</p>
+                <p class="section-text">Esse modelo ganhou força porque uma única plataforma raramente cobre sozinha
+                    todo o processo de negócio, o que torna a integração entre sistemas próprios e de terceiros uma
+                    necessidade operacional (Amer et al., 2026; Mehboob, 2025). A literatura também destaca que APIs
+                    aceleram desenvolvimento, reduzem reescrita de código e permitem reutilizar serviços existentes com
+                    menor custo e maior produtividade (Seth et al., 2024; Efuntade &amp; Efuntade, 2023; Mittapally,
+                    2024).</p>
+            </div>
+        </section>
+
+        <section class="concepts section" id="concepts">
+            <h2 class="section-title">Conceitos</h2>
+            <div class="section-container bd-grid">
+                <p class="section-text">Uma <abbr title="Application Programming Interface">API</abbr>, ou
+                    <i>Application Programming Interface</i>, é um conjunto de regras, funções, rotinas e formatos que
+                    permite a comunicação entre diferentes softwares sem expor toda a complexidade interna de cada
+                    sistema (Efuntade &amp; Efuntade, 2023; Park et al., 2025; Pawar et al., 2023). Ela funciona como
+                    uma camada de abstração: o sistema cliente faz uma requisição em formato padronizado, o sistema
+                    servidor processa essa solicitação e devolve uma resposta ou serviço (Park et al., 2025;
+                    Mittapally, 2024).</p>
+                <p class="section-text">Esse padrão traz interoperabilidade porque o consumidor da API não precisa
+                    conhecer a implementação interna do outro sistema para usar seus recursos (Park et al., 2025;
+                    Efuntade &amp; Efuntade, 2023). A literatura também descreve a API como um contrato de comunicação,
+                    pois ela define os tipos de chamadas, formatos de dados e regras de interação aceitas entre
+                    aplicações (Efuntade &amp; Efuntade, 2023; Gaddam, 2025).</p>
+                <figure class="figure">
+                    <img src="./images/api-conceitos.avif" alt="Imagem sobre o conceito de APIs" title="Conceito de APIs"
+                        width="300" height="300">
+                    <figcaption>Figura 1 – Conceito de APIs</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="types section" id="types">
+            <h2 class="section-title">Tipos</h2>
+            <div class="section-container bd-grid">
+                <p class="section-text">Os estudos distinguem APIs por arquitetura, protocolo e escopo de uso. Uma
+                    classificação básica separa <i>in-process APIs</i>, usadas dentro de ambientes locais, e
+                    <i>remote APIs</i>, voltadas à comunicação entre sistemas distribuídos e aplicações em nuvem
+                    (Efuntade &amp; Efuntade, 2023). Entre os tipos mais comuns, <abbr
+                        title="Simple Object Access Protocol">SOAP</abbr> é um padrão de mensagens estruturadas em <abbr
+                        title="eXtensible Markup Language">XML</abbr>, com forte uso corporativo, confiabilidade e
+                    adequação a transações complexas, especialmente em setores como finanças e saúde (Efuntade &amp;
+                    Efuntade, 2023; Addanki, 2025). <abbr title="Representational State Transfer">REST</abbr> se
+                    consolidou como o estilo mais difundido para APIs web por sua simplicidade, comunicação
+                    <i>stateless</i> e alinhamento com <abbr title="HyperText Transfer Protocol">HTTP</abbr> e <abbr
+                        title="JavaScript Object Notation">JSON</abbr> (Efuntade &amp; Efuntade, 2023; Addanki, 2025;
+                    Park et al., 2025).</p>
+                <p class="section-text">GraphQL surgiu para lidar melhor com necessidades de consulta complexa e para
+                    reduzir <i>over-fetching</i> e <i>under-fetching</i>, permitindo ao cliente pedir exatamente os
+                    campos necessários (Addanki, 2025; Tangudu, 2026). gRPC aparece como alternativa de alto
+                    desempenho para comunicação interna entre microserviços, usando HTTP/2 e serialização eficiente
+                    (Park et al., 2025; Tangudu, 2026).</p>
+            </div>
+        </section>
+
+        <section class="tools section" id="tools">
+            <h2 class="section-title">Ferramentas</h2>
+            <div class="section-container bd-grid">
+                <p class="section-text">A literatura trata <q>ferramentas</q> tanto como plataformas de integração
+                    quanto como componentes arquiteturais. Em ambientes distribuídos, <i>API gateways</i> aparecem de
+                    forma recorrente como ponto unificado de entrada, cuidando de autenticação, roteamento, limitação
+                    de taxa, tradução de protocolos e adaptação entre clientes e serviços (Mehboob, 2025; Putrevu,
+                    2025). Eles também ajudam a reduzir redundância e a aplicar políticas consistentes em vários
+                    serviços (Mehboob, 2025; Mylsamy &amp; Shrivastav, 2025).</p>
+                <p class="section-text">Outra frente importante envolve <i>middleware</i>, <i>service mesh</i>,
+                    <i>brokers</i> de eventos, orquestração de contêineres e <i>pipelines</i> de teste e integração
+                    contínua, todos usados para manter escalabilidade, observabilidade e resiliência (Gaddam, 2025;
+                    Mehboob, 2025; Mylsamy &amp; Shrivastav, 2025). Em integração empresarial, MuleSoft é citado como
+                    abordagem prática para conectar microserviços e acelerar inovação baseada em APIs (Pavan &amp;
+                    Gummadi, 2024).</p>
+
+                <table class="tools-table">
+                    <caption>
+                        <strong><u>Tabela 1 – Principais ferramentas e componentes citados para integrações baseadas em
+                                APIs</u></strong>
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th>Ferramenta ou componente</th>
+                            <th>Função principal</th>
+                            <th>Contexto de uso</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>API Gateway</td>
+                            <td>Entrada única, segurança e roteamento</td>
+                            <td>Microserviços e integrações externas (Mehboob, 2025)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Service Mesh</td>
+                            <td>Descoberta de serviços e gestão de tráfego</td>
+                            <td>Comunicação interna distribuída (Mehboob, 2025)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Event Broker</td>
+                            <td>Distribuição e persistência de eventos</td>
+                            <td>Integração assíncrona (Mehboob, 2025)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Container Orchestration</td>
+                            <td>Escala, automação e autocorreção</td>
+                            <td>Operação cloud-native (Mehboob, 2025)</td>
+                        </tr>
+
+                        <tr>
+                            <td>MuleSoft</td>
+                            <td>Integração orientada a APIs</td>
+                            <td>Empresas com arquitetura distribuída (Pavan &amp; Gummadi, 2024)</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <em>Fonte: elaborado com base em Mehboob (2025) e Pavan &amp; Gummadi (2024).</em>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="examples section" id="examples">
+            <h2 class="section-title">Exemplos</h2>
+            <div class="section-container bd-grid">
+                <p class="section-text">Os exemplos encontrados mostram APIs em diferentes domínios. Em sistemas
+                    corporativos e legados, uma estratégia frequente é combinar <i>System APIs</i>, <i>Process
+                        APIs</i> e <i>Experience APIs</i> para modernizar aplicações e conectar camadas antigas a
+                    interfaces novas (Gaddam, 2025). Em arquiteturas <i>cloud-native</i>, a combinação entre
+                    microserviços, eventos e <i>API gateway</i> é recomendada para alta escalabilidade, integração com
+                    legados e processamento em tempo real (Putrevu, 2025).</p>
+                <p class="section-text">Também há exemplos concretos de APIs amplamente usadas em ecossistemas
+                    digitais, como Google Maps, Stripe, Spotify, OpenWeatherMap e Twilio, avaliadas por documentação,
+                    integração, desempenho, suporte e segurança (Mittapally, 2024). No desenvolvimento prático, REST
+                    costuma ser mais simples de depurar com ferramentas como Postman e cURL, enquanto GraphQL favorece
+                    clientes com necessidades flexíveis de dados em um único <i>endpoint</i> (Bhosale, 2025).</p>
+                <figure class="figure">
+                    <img src="./images/exemplos-api.webp" alt="Imagem sobre exemplos de APIs" title="Exemplos de APIs"
+                        width="300" height="300">
+                    <figcaption>Figura 2 – Exemplos de APIs</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="conclusion section" id="conclusion">
+            <h2 class="section-title">Conclusão</h2>
+            <div class="section-container bd-grid">
+                <p class="section-text">APIs e integrações formam a infraestrutura central dos sistemas digitais
+                    modernos, porque padronizam a comunicação entre aplicações e tornam possível reutilizar serviços,
+                    conectar terceiros e escalar arquiteturas distribuídas (Seth et al., 2024; Mylsamy &amp;
+                    Shrivastav, 2025; Amer et al., 2026). A evidência indica que <strong>não existe um único padrão
+                        ideal</strong>: REST segue forte em serviços públicos, GraphQL atende melhor consultas
+                    complexas, gRPC favorece comunicação interna de alto desempenho, e SOAP continua relevante em
+                    cenários corporativos que exigem rigor transacional e segurança (Tangudu, 2026; Addanki, 2025).</p>
+                <p class="section-text">Ferramentas como gateways, middleware, orquestração, eventos e governança
+                    completam esse ecossistema, mostrando que integrar bem não depende apenas do protocolo escolhido,
+                    mas também de arquitetura, segurança, documentação, versionamento e gestão do ciclo de vida das
+                    APIs (Mehboob, 2025; Amer et al., 2026; Seth et al., 2024).</p>
+            </div>
+        </section>
+
+        <section class="bibliography section" id="bibliography">
+            <h2 class="section-title">Referências</h2>
+            <div class="section-container bd-grid">
+                <ol class="bibliography-list">
+                    <li><a href="https://doi.org/10.71097/ijsat.v16.i2.6579" target="_blank" rel="noopener noreferrer">ADDANKI, S.. Architectural shifts in API design: the progression from SOAP to REST and GraphQL. International Journal on Science and Technology. https://doi.org/10.71097/ijsat.v16.i2.6579</a></li>
+                    <li><a href="https://doi.org/10.2523/iptc-25215-ms" target="_blank" rel="noopener noreferrer">AMER, M.; ALI, A.; ALSAUD, S.; RUSHOOD, I. S. A.. Third-party systems integration and the role of API governance. IPTC Summit on AI for the Energy Industry. https://doi.org/10.2523/iptc-25215-ms</a></li>
+                    <li><a href="https://doi.org/10.55041/ijsrem11316" target="_blank" rel="noopener noreferrer">BHOSALE, P.. Implementing secure and scalable APIs in Java Spring Boot: RESTful vs. GraphQL services. International Journal of Scientific Research in Engineering and Management. https://doi.org/10.55041/ijsrem11316</a></li>
+                    <li><a href="https://doi.org/10.56201/jafm.v9.no6.2023.pg1.18" target="_blank" rel="noopener noreferrer">EFUNTADE, O.; EFUNTADE, A.. Application programming interface (API) and management of web-based accounting information system (AIS): security of transaction processing system, general ledger and financial reporting system. Journal of Accounting and Financial Management. https://doi.org/10.56201/jafm.v9.no6.2023.pg1.18</a></li>
+                    <li><a href="https://doi.org/10.63278/jicrcr.vi.3525" target="_blank" rel="noopener noreferrer">GADDAM, N.. API-first architecture in enterprise modernization: a hybrid orchestration approach. Journal of International Crisis and Risk Communication Research. https://doi.org/10.63278/jicrcr.vi.3525</a></li>
+                    <li><a href="https://doi.org/10.37745/ijsber.2013/vol13n17388" target="_blank" rel="noopener noreferrer">MEHBOOB, S. A.. Orchestrating the distributed enterprise: microservices as catalysts for systems integration evolution. International Journal of Small Business and Entrepreneurship Research. https://doi.org/10.37745/ijsber.2013/vol13n17388</a></li>
+                    <li><a href="https://doi.org/10.55124/jaim.v2i2.244" target="_blank" rel="noopener noreferrer">MITTAPALLY, R.. The secure computation application programming interface using the ARAS method. Journal of Artificial Intelligence and Machine Learning. https://doi.org/10.55124/jaim.v2i2.244</a></li>
+                    <li><a href="https://doi.org/10.36676/jrps.v16.i1.205" target="_blank" rel="noopener noreferrer">MYLSAMY, S.; SHRIVASTAV, E. A.. API design and integration in a microservices environment. International Journal for Research Publication and Seminar. https://doi.org/10.36676/jrps.v16.i1.205</a></li>
+                    <li><a href="https://doi.org/10.1080/20421338.2025.2578078" target="_blank" rel="noopener noreferrer">OFOEDA, J.; BOATENG, R.; C., J.; EFFAH, J.. Exploring the strategies shaping application programming interface development and integration in digital music platforms: a qualitative case study. African Journal of Science, Technology, Innovation and Development, 17, 1008-1024. https://doi.org/10.1080/20421338.2025.2578078</a></li>
+                    <li><a href="https://doi.org/10.3348/kjr.2025.0360" target="_blank" rel="noopener noreferrer">PARK, C. R.; HEO, H.; SUH, C. H.; SHIM, W. H.. Uncover this tech term: application programming interface for large language models. Korean Journal of Radiology, 26, 793-796. https://doi.org/10.3348/kjr.2025.0360</a></li>
+                    <li><a href="https://doi.org/10.52783/jes.9328" target="_blank" rel="noopener noreferrer">PAVAN, V.; GUMMADI, K.. Microservices architecture with APIs: design, implementation, and MuleSoft integration. Journal of Electrical Systems. https://doi.org/10.52783/jes.9328</a></li>
+                    <li><a href="https://doi.org/10.1109/iciics59993.2023.10421593" target="_blank" rel="noopener noreferrer">PAWAR, S.; K, S.; LAXMI, G.. Application programming interface with a case study of SOA. 2023 International Conference on Integrated Intelligence and Communication Systems (ICIICS), 1-5. https://doi.org/10.1109/iciics59993.2023.10421593</a></li>
+                    <li><a href="https://doi.org/10.59573/emsj.9(5).2025.60" target="_blank" rel="noopener noreferrer">PUTREVU, A.. Cloud-native enterprise integration patterns: microservices, event-driven models, and API gateways. European Modern Studies Journal. https://doi.org/10.59573/emsj.9(5).2025.60</a></li>
+                    <li><a href="https://doi.org/10.22214/ijraset.2024.63786" target="_blank" rel="noopener noreferrer">SETH, D.; RATRA, K. K.; LAKSHMINARAYANACHAR, R.; ATHAMAKURI, S.; SUNDESWARAN, A.. Pattern play: advanced API integration for cutting-edge applications. International Journal for Research in Applied Science and Engineering Technology. https://doi.org/10.22214/ijraset.2024.63786</a></li>
+                    <li><a href="https://doi.org/10.30574/ijsra.2026.18.3.0416" target="_blank" rel="noopener noreferrer">TANGUDU, R.. A comparative design study of REST, GraphQL and gRPC APIs for large-scale applications. International Journal of Science and Research Archive. https://doi.org/10.30574/ijsra.2026.18.3.0416</a></li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p id="footer-title">Pesquisa criada para a aula de Desenvolvimento Web</p>
+        <p>&copy; Luiz Henrique Bueno. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
